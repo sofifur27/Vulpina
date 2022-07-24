@@ -458,11 +458,11 @@ p{
 /*contacto*/
 .backcontacto{
   display: grid;
-  grid-template-columns: 30px auto 30px;
+  grid-template-columns: 10px auto 10px;
   grid-auto-rows: auto auto auto;
   grid-template-areas: 
     "menuresp logo ."
-    ". form ."
+    "form form form"
     "footer . ."
 }
 }
