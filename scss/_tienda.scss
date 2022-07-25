@@ -1,0 +1,25 @@
+.backtienda{
+    background-image: url(../Fondos/fondotienda.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-auto-rows: auto auto auto auto;
+    grid-template-areas: 
+    ". logo ."
+    ". header ."
+    ". menutienda ."
+    "footer . ."
+}
+.menutienda{
+  margin: 50px;
+  padding-left: 50px;
+  grid-area: menutienda;
+}
+.ul>li{
+  padding: 5px;
+}
+.selectcarousel{
+  display: none;
+}

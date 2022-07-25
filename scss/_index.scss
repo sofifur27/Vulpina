@@ -1,0 +1,18 @@
+.backindex{
+    background-image: url(../Fondos/index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-auto-rows: auto auto auto auto;
+    grid-template-areas: 
+    ". logo ."
+    ". header ."
+    ". carouselind ."
+    "footer . ."
+}
+.carouselind{
+    grid-area: carouselind;
+    padding: 50px;
+}

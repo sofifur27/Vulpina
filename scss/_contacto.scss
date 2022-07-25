@@ -1,0 +1,31 @@
+.backcontacto{
+    background-image: url(../Fondos/contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-auto-rows: auto auto auto auto;
+    grid-template-areas: 
+    ". logo ."
+    ". header ."
+    ". form ."
+    "footer . ."
+}
+.form{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  grid-area: form;
+}
+.send{
+  background-color: rgb(184, 127, 89);
+  border-radius: 7px;
+  padding: 5px;
+  border-color: rgb(153, 61, 1);
+  &:hover{
+  background-color: rgb(198, 124, 63);
+  box-shadow: 3px 4px 6px white;
+  text-shadow: 0 0 0;
+  }
+}

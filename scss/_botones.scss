@@ -1,0 +1,114 @@
+#header{
+    margin: auto;
+    padding-left: 80px;
+    max-width: 1000px;
+    grid-area: header;
+  }
+  ul, ol{
+    list-style: none;
+  }
+  .nav li a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: block;
+  }
+  nav ul {
+    display: inline;
+  }
+  .nav li ul{
+    display: none;
+    position: absolute;
+  }
+  .nav li:hover > ul{
+    display: block;
+    scroll-behavior: inherit;
+  }
+  
+  .button,
+  .button::before,
+  .button::after,
+  .button li,
+  .button li::before,
+  .button li::after
+  {
+    transition: all ease .5s;
+  }
+  
+  .button{
+    position: relative;
+    display: inline-block;
+    padding: 0.3em;
+    margin: 1em;
+    border: solid 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+      &:hover
+      {
+        box-shadow: 0 0 5em .5em rgba(50,50,150,0.5);
+      }
+  }
+  .button:hover li
+  {
+    background-color: #fff;
+    color: #112;
+  }
+  .button::before,
+  .button::after,
+  .button li::before,
+  .button li::after
+  {
+    content: '';
+    position: absolute;
+    border: 1px;
+  }
+  
+  .button::before,
+  .button li::before
+  {
+    border-style: solid none;  
+  }
+  .button::before,
+  .button li::after{      
+    left: 0;
+    top: -0.4em;
+    width: 100%; 
+    height: calc(100% + 0.8em);
+  }
+  
+  .button::after,
+  .button li::after
+  {
+    border-style: none solid;   
+  }
+  
+  .button::after,
+  .button li::before
+  {
+    top: 0;
+    left: -0.4em;
+    height: 100%;
+    width: calc(100% + 0.8em); 
+  }
+  
+  .button:hover::after,
+  .button:hover li::after
+  {
+    transform: scaleY(0);
+  }
+  
+  .button:hover::before,
+  .button:hover li::before
+  {
+    transform: scaleX(0);
+  }
+  
+  .button:hover li::after,
+  .button:hover li::before
+  {
+    opacity: 0;
+  }
+  .menuresp{
+    display: none;
+  }

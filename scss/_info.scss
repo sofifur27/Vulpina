@@ -1,0 +1,19 @@
+/*info*/
+.backinfo{
+    background-image: url(../Fondos/info.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 35px auto 35px;
+    grid-auto-rows: auto auto auto auto;
+    grid-template-areas: 
+    ". logo ."
+    ". header ."
+    ". carouselinfo ."
+    "footer . ."
+}
+.carouselinfo{
+  grid-area: carouselinfo;
+  padding-top: 30px;
+}
