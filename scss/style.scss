@@ -6,9 +6,214 @@
 @import "./tienda";
 @import "./nosotros";
 @import "./menu";
-@import "./medias";
 @import "./info";
 @import "./index";
 @import "./footer";
 @import "./contacto";
 @import "./botones";
+
+@media screen and (max-width: 480px) {
+    /*menu*/
+    .menuresp{
+      display: block;
+      grid-area: menuresp;
+    }
+    .carouselind{
+      padding: 0px;
+      margin: 0px;
+      max-width: 470px;
+    }
+    #header, header{
+      display: none;
+    }
+    #menuToggle{
+    display: block;
+    position: relative;
+    top: 130px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle a{
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; 
+    z-index: 2; 
+    -webkit-touch-callout: none;
+  }
+  
+  #menuToggle span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child{
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: black;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  #menu{
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #menu li{
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  #menuToggle input:checked ~ ul{
+    transform: none;
+  }
+  .backindex{
+    display: grid;
+      grid-template-columns: 10px auto 10px;
+      grid-auto-rows: auto auto auto;
+      grid-template-areas: 
+      "menuresp logo ."
+      ". carouselind ."
+      "footer . ."
+  }
+ }
+
+ @media screen and (max-width: 480px){
+  /*footer*/
+  footer{
+    grid-area: footer;
+  }
+  .sizeicons{
+    max-width: 45px;
+  }
+ }
+
+ @media screen and (max-width: 480px) {
+  /*NOSOTROS*/
+  .carouselnos{
+    grid-area: carouselnos;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  h1{
+    padding-top: 50px;
+    font-size: 40px;
+  }
+  p{
+    font-size: 18px;
+  }
+  .textoqs{
+    padding-top: 50px;
+  }
+  .backnosotros{
+    display: grid;
+      grid-template-columns: 5px auto 5px;
+      grid-auto-rows: auto auto auto auto;
+      grid-template-areas: 
+      "menuresp logo ."
+      ". carouselnos ."
+      ". texto ."
+      "footer . .";
+  }
+ }
+
+ @media screen and (max-width: 480px) {
+  /*tienda*/
+  .selectcarousel{
+    display: block;
+    grid-area: selectcarousel;
+  }
+  .menutienda{
+    display: none;
+  }
+  .backtienda{
+      display: grid;
+      grid-template-columns: 5px auto 5px;
+      grid-auto-rows: auto auto auto;
+      grid-template-areas: 
+      "menuresp logo ."
+      ". selectcarousel ."
+      "footer . .";
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+  /*info*/
+  .backinfo{
+      display: grid;
+      grid-template-columns: 10px auto 10px;
+      grid-auto-rows: auto auto auto;
+      grid-template-areas: 
+      "menuresp logo ."
+      ". carouselinfo ."
+      "footer . .";
+  }
+  .carouselinfo{
+    grid-area: carouselinfo;
+    display: block;
+    padding: 0px;
+    max-width: fit-content;
+  }
+ }
+
+ @media screen and (max-width: 480px) {
+  /*contacto*/
+  .backcontacto{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-auto-rows: auto auto auto;
+    grid-template-areas: 
+      "menuresp logo ."
+      "form form form"
+      "footer . ."
+  }
+  }
