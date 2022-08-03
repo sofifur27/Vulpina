@@ -1,3 +1,9 @@
+/*contacto*/
+@mixin colores{
+  background-color: rgb(184, 127, 89);
+  border-color:  rgb(153, 61, 1);
+}
+
 .backcontacto{
     background-image: url(../Fondos/contacto.jpg);
     background-repeat: no-repeat;
@@ -19,10 +25,9 @@
   grid-area: form;
 }
 .send{
-  background-color: rgb(184, 127, 89);
-  border-radius: 7px;
-  padding: 5px;
-  border-color: rgb(153, 61, 1);
+  @include colores;
+  padding: 7px;
+  border-radius: 5px;
   &:hover{
   background-color: rgb(198, 124, 63);
   box-shadow: 3px 4px 6px white;

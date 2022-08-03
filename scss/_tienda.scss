@@ -1,3 +1,4 @@
+/*tienda*/
 .backtienda{
     background-image: url(../Fondos/fondotienda.jpg);
     background-repeat: no-repeat;
@@ -9,17 +10,30 @@
     grid-template-areas: 
     ". logo ."
     ". header ."
-    ". menutienda ."
+    ". selectcarousel ."
     "footer . ."
 }
-.menutienda{
-  margin: 50px;
-  padding-left: 50px;
-  grid-area: menutienda;
-}
+
 .ul>li{
   padding: 5px;
 }
 .selectcarousel{
-  display: none;
+  grid-area: selectcarousel;
+  display: flex;
+  max-width: 30%;
+  margin-left: 550px;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  .selectcarousel{
+    margin-left: 300px;
+    max-width: 30%;
+  }
+}
+@media screen and (max-width: 800px){
+  .selectcarousel{
+    margin-left: 200px;
+    max-width: 30%;
+  }
 }

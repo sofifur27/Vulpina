@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+/*tienda*/
 .backtienda {
   background-image: url(../Fondos/fondotienda.jpg);
   background-repeat: no-repeat;
@@ -11,13 +12,7 @@
   display: grid;
   grid-template-columns: 30px auto 30px;
   grid-auto-rows: auto auto auto auto;
-  grid-template-areas: ". logo ." ". header ." ". menutienda ." "footer . .";
-}
-
-.menutienda {
-  margin: 50px;
-  padding-left: 50px;
-  grid-area: menutienda;
+  grid-template-areas: ". logo ." ". header ." ". selectcarousel ." "footer . .";
 }
 
 .ul > li {
@@ -25,9 +20,26 @@
 }
 
 .selectcarousel {
-  display: none;
+  grid-area: selectcarousel;
+  display: flex;
+  max-width: 30%;
+  margin-left: 550px;
+  padding-top: 50px;
 }
 
+@media screen and (max-width: 1000px) {
+  .selectcarousel {
+    margin-left: 300px;
+    max-width: 30%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .selectcarousel {
+    margin-left: 200px;
+    max-width: 30%;
+  }
+}
+/*nosotros*/
 .backnosotros {
   background-image: url(../Fondos/quienessomos.jpg);
   background-repeat: no-repeat;
@@ -92,6 +104,7 @@ header {
   padding-top: 30px;
 }
 
+/*index*/
 .backindex {
   background-image: url(../Fondos/index.jpg);
   background-repeat: no-repeat;
@@ -108,6 +121,7 @@ header {
   padding: 50px;
 }
 
+/*footer*/
 .sizeicons {
   max-width: 60px;
   margin: 10px;
@@ -120,6 +134,7 @@ footer {
   padding-top: 30px;
 }
 
+/*contacto*/
 .backcontacto {
   background-image: url(../Fondos/contacto.jpg);
   background-repeat: no-repeat;
@@ -140,9 +155,9 @@ footer {
 
 .send {
   background-color: rgb(184, 127, 89);
-  border-radius: 7px;
-  padding: 5px;
   border-color: rgb(153, 61, 1);
+  padding: 7px;
+  border-radius: 5px;
 }
 .send:hover {
   background-color: rgb(198, 124, 63);
@@ -150,6 +165,7 @@ footer {
   text-shadow: 0 0 0;
 }
 
+/*botones*/
 #header {
   margin: auto;
   padding-left: 80px;
@@ -205,7 +221,7 @@ nav ul {
 }
 
 .button:hover li {
-  background-color: #fff;
+  background-color: white;
   color: #112;
 }
 
@@ -288,7 +304,7 @@ nav ul {
   }
   #menuToggle a {
     text-decoration: none;
-    color: #000000;
+    color: black;
     transition: color 0.3s ease;
   }
   #menuToggle input {
@@ -377,7 +393,6 @@ nav ul {
     padding: 0px;
   }
   h1 {
-    padding-top: 50px;
     font-size: 40px;
   }
   p {
@@ -398,9 +413,8 @@ nav ul {
   .selectcarousel {
     display: block;
     grid-area: selectcarousel;
-  }
-  .menutienda {
-    display: none;
+    max-width: 100%;
+    margin-left: 0px;
   }
   .backtienda {
     display: grid;

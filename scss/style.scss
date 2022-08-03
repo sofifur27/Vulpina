@@ -12,6 +12,14 @@
 @import "./contacto";
 @import "./botones";
 
+$pad: (
+  pd50: 50px,
+  pd0: 0px,
+);
+$color: (
+  negro: black,
+  blanco: white,
+);
 @media screen and (max-width: 480px) {
     /*menu*/
     .menuresp{
@@ -19,8 +27,8 @@
       grid-area: menuresp;
     }
     .carouselind{
-      padding: 0px;
-      margin: 0px;
+      padding: map-get($pad, pd0);
+      margin: map-get($pad, pd0);
       max-width: 470px;
     }
     #header, header{
@@ -30,7 +38,7 @@
     display: block;
     position: relative;
     top: 130px;
-    left: 50px;
+    left: map-get($pad, pd50);
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -38,7 +46,7 @@
   
   #menuToggle a{
     text-decoration: none;
-    color: #000000;
+    color: map-get($color, negro);
     transition: color 0.3s ease;
   }
   
@@ -61,7 +69,7 @@
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: black;
+    background: map-get($color, negro);
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -81,7 +89,7 @@
   #menuToggle input:checked ~ span{
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: black;
+    background: map-get($color, negro);
   }
   
   #menuToggle input:checked ~ span:nth-last-child(3){
@@ -140,19 +148,18 @@
   /*NOSOTROS*/
   .carouselnos{
     grid-area: carouselnos;
-    margin: 0px;
-    padding: 0px;
+    margin: map-get($pad, pd0);
+    padding: map-get($pad, pd0);
   }
   
   h1{
-    padding-top: 50px;
     font-size: 40px;
   }
   p{
     font-size: 18px;
   }
   .textoqs{
-    padding-top: 50px;
+    padding-top: map-get($pad, pd50);
   }
   .backnosotros{
     display: grid;
@@ -171,9 +178,8 @@
   .selectcarousel{
     display: block;
     grid-area: selectcarousel;
-  }
-  .menutienda{
-    display: none;
+    max-width: 100%;
+    margin-left: 0px;
   }
   .backtienda{
       display: grid;
@@ -200,7 +206,7 @@
   .carouselinfo{
     grid-area: carouselinfo;
     display: block;
-    padding: 0px;
+    padding: map-get($pad, pd0);
     max-width: fit-content;
   }
  }
