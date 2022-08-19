@@ -210,7 +210,6 @@ $color: (
     max-width: fit-content;
   }
  }
-
  @media screen and (max-width: 480px) {
   /*contacto*/
   .backcontacto{
@@ -219,7 +218,17 @@ $color: (
     grid-auto-rows: auto auto auto;
     grid-template-areas: 
       "menuresp logo ."
-      "form form form"
+      ". containerform ."
       "footer . ."
   }
+  .containerform{
+      grid-area: containerform;
+      display: grid;
+      grid-template-columns: 25% 50% 25%;
+      grid-template-rows: 30% 50% 10%;
+      grid-template-areas:
+        ". . ."
+        ". form ."
+        ". . .";
+      }
   }
